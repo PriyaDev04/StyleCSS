@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+    <!-- Internal Css -->
+
+
+    <style>
+        h2 {
+            color: rgb(241, 155, 15);
+            background-color: rgb(242, 10, 10);
+            /* Same given so it will overwrite because order is very important */
+            background-color: black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- CSS--->
+
+    <!-- Cascading Style Sheet
+    Three Ways---1. Inline, Internal and external CSS  -->
+
+    <!-- Inline CSS -->
+    <h1 style="color: blueviolet;background-color: blanchedalmond;">priya</h1>
+    <!-- left side -- property
+         right side---value
+         ;---- end -->
+
+
+    <!-- above in head section I have given internal css -->
+    <h2>Tomato</h1>
+
+
+
+        <!-- 
+    inside tag if we give attribute its called inline css
+    style tag is used for internal css in the head section -->
+
+        <!--External CSS  -->
+        <!-- 
+    If we have to give 1000 lines Css so we are using external Css -->
+
+        <!-- 1. link has to give in head section
+        two things to keep
+        1. if u give internal css in head section and then external css tag first 
+        priority for the first and second will overwrite for same stag styling
+
+        -->
+        <link rel="stylesheet" href="style.css">
+        <!-- If there is no file then click ctrl+enter so if there is no file it will create new -->
+
+        <!-- !important---- will apply 100% strcit -->
+        <h3 style="color: blueviolet !important;">Queen</h3>
+
+        <!-- ID AND CLASS -->
+        <!-- ID is UNIQUE and CLASS is duplicated -->
+        <div class="name">Queen</div>
+        <div id="secondname">Vibes</div>
+
+
+
+        <!-- Till above if we give bg color it will whole page in Hr line -->
+        <!--  BLOCK elememts like div  100% width it will take even content is small
+        INLINE elements like span,anchor etc will take only accrding to content 
+        INLINE-BLOCK elements according 
+        to content same like inline but can be incrased height and width as per requirement
+        -->
+
+        <!-- block -->
+        <p>I am a Queen</p>
+        <!-- block -->
+        <p>Only Positive Vibes</p>
+        <!-- block -->
+        <h1>I am positive attitude</h1>
+        <!-- Inline  -->
+        <span>Good Girl only</span>
+
+
+        <style>
+            p,
+            h1,
+            span {
+                background-color: blue;
+            }
+        </style>
+
+        <!-- Shortcut -->
+        <!-- #container>.box.box-${box $}*4 -->
+        <div id="container">
+            <div class="box box-1">box 1</div>
+            <div class="box box-2">box 2</div>
+            <div class="box box-3">box 3</div>
+            <div class="box box-4">box 4</div>
+        </div>
+
+        <!-- this brind the each div in block  -->
+        <!-- <style>
+            #container {
+                background-color: aqua;
+            }
+
+            .box {
+                height: 200px;
+                width: 200px;
+                background-color: blue;
+                border: 2px solid brown;
+            }
+        </style> -->
+
+        <!-- If i need in one line then -->
+        <!-- <style>
+            #container {
+                background-color: aqua;
+            }
+
+            .box {
+                height: 200px;
+                width: 200px;
+                background-color: blue;
+                border: 2px solid brown;
+                display: inline-block;
+            }
+        </style> -->
+
+        <!-- now I dont need gap between each boxes so display: flex; -->
+
+        <style>
+            /* if any additional skin clr so we can remove*/
+            body {
+                margin: 0;
+            }
+
+            /* Univeral */
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            #container {
+                background-color: aqua;
+                height: 400px;
+                display: flex;
+                /* it goes end */
+                justify-content: flex-end;
+                /* center */
+                justify-content: center;
+
+                /* space inbetween */
+                justify-content: space-between;
+                /* exatctly center */
+                align-items: center;
+            }
+
+            .box {
+                height: 200px;
+                width: 200px;
+                background-color: blue;
+                border: 2px solid brown;
+
+            }
+        </style>
+</body>
+
+</html>
