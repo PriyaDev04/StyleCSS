@@ -1,0 +1,178 @@
+
+/* try this last after doing the below */
+*{ 
+     margin: 0 ;
+    padding: 0; 
+    box-sizing: border-box; 
+ }
+
+/* Parent */
+header{
+    background-color: rgb(28, 137, 227);
+    padding: 5px 25px;
+    display: flex;
+    /* two child will go end */
+    justify-content: end;
+/* one in left and other in right */
+    justify-content: space-between;
+
+    /* center it makes the items vertically */
+    align-items: center;
+    /* makes the heading freeze */
+   position:static;
+   top: 0px;
+      /* added after media tag because commented there */
+    row-gap: 5px;
+
+}
+
+
+/* I have to make the list vertical to horizontal */
+nav ul{
+    list-style-type: none;
+    display: flex;
+    /* to give space between each list items */
+    gap: 30px;
+    /* added after media tag because commented there */
+    row-gap: 5px;
+}
+
+/* just for knowing the space for li */
+/* nav ul li{
+    background-color: yellowgreen;
+} */
+
+ul li a{
+    text-decoration: none;
+    /* font */
+    color: black;
+/* since a tag is inline so we cant give height and width so converting to inline block */
+    display: inline-block;
+    padding: 6px 20px ;
+    background-color: rgb(169, 18, 183);
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    
+}
+
+ul li a:hover{
+background-color: rgb(13, 199, 53);
+color: blue;
+transition: all 2s;
+
+
+    
+}
+
+/* nav{
+    background-color: rgb(233, 233, 241);
+} */
+
+/*  twin child 1 */
+/* .left{
+    background-color: rgb(239, 231, 231);
+} */
+
+.left .logo img{
+    height: 100%;
+}
+
+.left .logo{
+    height: 60px;
+}
+
+/*  twin child 2 */
+/* .right{
+     background-color: crimson; 
+} */
+
+
+
+/* media  */
+
+/* pasting below here */
+
+.hamburger i{
+font-size: 1.8rem;
+}
+
+
+.hamburger{
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px 6px;
+    display: none;
+}
+
+/* mobile */
+@media screen and (max-width:479px) {
+    
+    /* header{
+        flex-direction: column;
+    } */
+    header nav ul{
+        display: none;
+        flex-direction: column;
+        /* row-gap: 5px; */
+    }
+     .hamburger{
+        display: block ;
+    }
+}
+
+nav ul li:after{
+    content: "";
+    height: 8px;
+    width: 0%;
+    display: block;
+    /* color: red; */
+    background-color: rgb(226, 219, 16);
+    border-top-right-radius: 3px ;
+    border-bottom-right-radius: 3px ;
+}
+
+nav ul li:hover:after{
+    /* content: ""; */
+    /* height: 8px; */
+    width: 100%;
+    transform: all 0.7 s;
+    /* display: block; */
+    /* color: red; */
+    /* background-color: red; */
+}
+
+/* mobile it is showing perfect tab , its getting breaking so below */
+
+@media screen and (max-width:480px) and (max-width:767px) {
+    
+    header nav ul{
+      
+       display: none;
+        flex-wrap: wrap;
+       margin-left: 40%;
+       
+    }
+    .hamburger{
+        /* font-size: 1.8rem; */
+        display: block ;
+    }
+}
+
+
+/* if its here then it wont work so copy and pasting above */
+/* The above will work with same but if you need the 3 lines then add div hamburger in html and css below */
+
+/* .hamburger i{
+font-size: 1.8rem;
+}
+
+
+.hamburger {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 3px 6px;
+    display: none;
+} */
