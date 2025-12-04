@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            border: 2px solid rgb(10, 10, 207);
+            border-radius: 5%;
+            position: absolute;
+        }
+
+        .box:nth-of-type(1) {
+            background-color: rgb(149, 218, 132);
+            /* can bring above in another form and default z index is 0*/
+            z-index: 1;
+        }
+
+        .box:nth-of-type(2) {
+            background-color: rgb(42, 165, 118);
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+        }
+
+        .box:nth-of-type(3) {
+            background-color: rgb(235, 44, 228);
+            top: 100px;
+            left: 100px;
+            /* can give any number below to above number in z index */
+            z-index: 3;
+            /* if you give -1 or anything in - it goes back */
+        }
+
+        .box:nth-of-type(4) {
+            background-color: rgb(176, 219, 19);
+            top: 150px;
+            left: 150px;
+            z-index: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box 1</div>
+    <div class="box">box 2</div>
+    <div class="box">box 3</div>
+    <div class="box">box 4</div>
+</body>
+
+</html>
