@@ -6,12 +6,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Z-index and Anime 2D</title>
     <style>
+        .ball {
+            height: 150px;
+            width: 150px;
+            /* since im giving 5 different balls so commenting below */
+            /* background-color: lightcoral; */
+            border: 2px solid lightseagreen;
+            border-radius: 50%;
+            /* fix the ball in body before giving animation */
+            position: absolute;
+            /* if using keyframes then  use below and wahtever name given there use that-ex myAnim*/
+            /* animation-name: myAnim; */
+            animation-name: zigzag;
 
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            /* which way it gone same ay to return back but in calc() */
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            /* since 5 diff balls give there */
+            /* animation-delay: 2s; */
+        }
+
+        .ball-1 {
+            background-color: aqua;
+            animation-delay: 1s;
+        }
+
+        .ball-2 {
+            background-color: rgb(227, 10, 209);
+            animation-delay: 2s;
+        }
+
+        .ball-3 {
+            background-color: rgb(50, 207, 97);
+            animation-delay: 3s;
+        }
+
+        .ball-4 {
+            background-color: rgb(227, 115, 29);
+            animation-delay: 4s;
+        }
+
+        /* .ball-5 {
+            background-color: rgb(227, 32, 32);
+            animation-delay: 4s;
+        } */
+
+
+        body {
+            overflow-x: hidden;
+        }
+
+        /*  the ball will move only with the help of cursor but i need automatically */
+        /* .ball:hover {
+            transform: translate(100px, 200px);
+        } */
+
+        /* automatically  to from top to bottom*/
+        /* @keyframes myAnim {
+            from { */
+
+        /* initial value is important to give */
+        /* top: 0px;
+                left: 0px;
+            }
+
+            to { */
+
+        /* what happens if i give 100% instead of px */
+        /* % and vh works same  but not px */
+        /* top: 90%; */
+        /* top: 90vh */
+
+        /* top: 100px */
+
+
+        /* in css there is an fn() */
+
+        /* 150 is the ball size  */
+        /* top: calc(100vh - 150px);
+            }
+        } */
+
+        /*  zigzag */
+        @keyframes zigzag {
+            0% {
+                top: 0px;
+                left: 0px
+            }
+
+            25% {
+                top: calc(100vh - 150px);
+                left: calc(25vw - 150px)
+            }
+
+            50% {
+                top: 0px;
+                left: calc(50vw - 150px)
+            }
+
+            75% {
+                top: calc(100vh - 150px);
+                left: calc(75vw - 150px)
+            }
+
+
+            100% {
+                top: 0px;
+                left: calc(100vw - 150px)
+            }
+        }
+
+        /* after give this zigzag little effect is not touching in the outline of body
+         so given in style line number  29*/
     </style>
 </head>
 
 <body>
-    <div class="ball"></div>
+    <!-- background-color= -->
+    <div class="ball ball-1"></div>
+    <div class="ball ball-2"></div>
+    <div class="ball ball-3"></div>
+    <div class="ball ball-4"></div>
+    <!-- <div class="ball ball-5"></div> -->
     <div class="container">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas repudiandae quo qui exercitationem nesciunt
             eveniet vel hic commodi cupiditate nobis, reiciendis similique quis, a dolorum ipsum velit facilis quidem.
