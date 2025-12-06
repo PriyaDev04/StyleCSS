@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 20px;
+            /* background-color: gray; */
+            /* height: 400px; */
+            display: grid;
+            /* grid-template-columns: 300px 200px 400px; */
+            /* grid-template-columns:1fr 3fr 1fr; */
+            /* grid-template-columns:repeat(12,1fr); */
+            grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+            place-content: center;
+            /* gap: 20px; */
+        }
+
+        .box {
+            min-height: 200px;
+            min-width: 200px;
+            /* background-color: greenyellow; */
+            border: 2px solid red;
+        }
+
+        .box_2 {
+            /* grid-column-start: 2;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3; */
+            grid-column: 2/4;
+            grid-row: 1/3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box box_1">Box 1</div>
+        <div class="box box_2">Box 2</div>
+        <div class="box box_3">Box 3</div>
+        <div class="box box_4">Box 4</div>
+        <div class="box box_5">Box 5</div>
+        <div class="box box_6">Box 6</div>
+        <div class="box box_7">Box 7</div>
+        <div class="box box_8">Box 8</div>
+        <div class="box box_9">Box 9</div>
+        <div class="box box_10">Box 10</div>
+        <div class="box box_11">Box 11</div>
+        <div class="box box_12">Box 12</div>
+        <div class="box box_13">Box 13</div>
+        <div class="box box_14">Box 14</div>
+        <div class="box box_15">Box 15</div>
+        <div class="box box_16">Box 16</div>
+        <div class="box box_17">Box 17</div>
+        <div class="box box_18">Box 18</div>
+        <div class="box box_19">Box 19</div>
+        <div class="box box_20">Box 20</div>
+        <div class="box box_21">Box 21</div>
+        <div class="box box_22">Box 22</div>
+        <div class="box box_23">Box 23</div>
+        <div class="box box_24">Box 24</div>
+        <div class="box box_25">Box 25</div>
+        <div class="box box_26">Box 26</div>
+        <div class="box box_27">Box 27</div>
+        <div class="box box_28">Box 28</div>
+        <div class="box box_29">Box 29</div>
+        <div class="box box_30">Box 30</div>
+    </div>
+
+</body>
+
+</html>

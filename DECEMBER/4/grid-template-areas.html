@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 1.2rem;
+            border: 2px solid black;
+        }
+
+        header,
+        main,
+        section,
+        aside,
+        footer {
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+        }
+
+        main {
+            display: grid;
+            grid-template-areas:
+                "aside-left aside-left section1 section1 section1 section1 section1 section1 section1 section1 section1 aside-right"
+                "aside-left aside-left section2 section2 section2 section2 section2 section2 section2 section2 section2 section2";
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        main {
+            grid-area: main;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+
+        aside#left {
+            grid-area: aside-left;
+        }
+
+        section#sec_1 {
+            grid-area: section1;
+        }
+
+        section#sec_2 {
+            grid-area: section2;
+        }
+
+        aside#right {
+            grid-area: aside-right;
+        }
+
+        @media screen and (max-width: 480px) {
+            main {
+                display: grid;
+                grid-template-areas:
+                    "aside-left aside-left aside-left aside-left aside-left aside-left aside-left aside-left aside-left aside-left aside-left aside-left"
+                    /* "section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 aside-right" */
+                    "section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1 section1"
+                    "section2 section2 section2 section2 section2 section2 section2 section2 section2 section2 section2 section2"
+                    "aside-right aside-right aside-right aside-right aside-right aside-right aside-right aside-right aside-right aside-right aside-right aside-right";
+            }
+
+            /* aside#left{
+            display: none;
+        } */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- https://cssgridgarden.com/ -->
+    <header>Header</header>
+    <main>
+        <aside id="left">Aside 1</aside>
+        <section id="sec_1">
+            Section 1
+            <article>Article 1</article>
+        </section>
+        <section id="sec_2">
+            Section 2
+            <article>Article 2</article>
+        </section>
+        <aside id="right">Aside 2</aside>
+    </main>
+    <footer>Footer</footer>
+</body>
+
+</html>
